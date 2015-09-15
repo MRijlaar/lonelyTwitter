@@ -8,9 +8,11 @@ import java.util.Date;
 
 
 public class MoodHappy extends Mood {
-    private Date date;
 
-    public MoodHappy(String mood) {
-        super(mood);
+    public MoodHappy(Date date) {
+        super("Happy");
+        setDate(date);
     }
+
+
 }
