@@ -12,7 +12,7 @@ public class TweetList {
 
     }
 
-    public void addTweet(Tweet tweet){
+    public void addTweet(Tweet tweet) throws IllegalArgumentException{
         //if
         tweets.add(tweet);
     }

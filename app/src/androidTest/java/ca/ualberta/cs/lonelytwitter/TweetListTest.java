@@ -19,6 +19,13 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 {
     public void testAddTweet(){
         TweetList list = new TweetList();
         list.addTweet(new NormalTweet("test"));
+        Boolean thrown = Boolean.FALSE;
+        try {
+            list.addTweet(new NormalTweet("test"));
+        }catch(IllegalArgumentException e){
+            thrown = Boolean.TRUE;
+        }
+        assertTrue(thrown);
     }
 
     public void testRemoveTweet(){
@@ -48,7 +55,7 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 {
 
     public void testGetTweets(){
         TweetList list = new TweetList();
-        assertFalse(list.getTweets()==null);
+        assertFalse(list.getTweets() == null);
     }
 
 }
