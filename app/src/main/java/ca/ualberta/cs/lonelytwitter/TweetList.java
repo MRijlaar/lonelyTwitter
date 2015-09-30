@@ -13,7 +13,7 @@ public class TweetList {
     }
 
     public void addTweet(Tweet tweet) throws IllegalArgumentException{
-        //if
+        if(tweets.contains(tweet)) throw new IllegalArgumentException();
         tweets.add(tweet);
     }
 
